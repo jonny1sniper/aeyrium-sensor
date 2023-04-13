@@ -126,8 +126,8 @@ public class AeyriumSensorPlugin implements FlutterPlugin, EventChannel.StreamHa
     float[] orientation = new float[3];
     SensorManager.getOrientation(adjustedRotationMatrix, orientation);
 
-    double pitch = - orientation[1];
-    double roll = - orientation[2];
+    double pitch = orientation[1];
+    double roll = orientation[2];
     double[] sensorValues = new double[2];
     sensorValues[0] = pitch;
     sensorValues[1] = roll;
